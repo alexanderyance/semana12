@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>liquida factura</title>
+</head>
+<body>
+    <center></center>
+        <h1>supermercado el vacano</h1>
+        <h2>factura venta</h2>
+        <script>
+            //Programa que permita capturar el nombre de un producto, su precio unitario y su cantidad, luego calcular subtotal, descuento 10%, iva 19% y neto a pagar. Enviar mensaje Gracias por su compra//
+            const SPeso = new Intl.NumberFormat('es-CO', {
+            style: 'currency',
+            currency: 'COP',
+            minimumFractionDigits: 0
+            });
+            //variables
+            let precio,cant,desc, iva, netop;
+            var nombrep;
+            //entrada
+            nombrep=prompt("ingrese nombre producto a comprar");
+            precio=parseInt(prompt("ingrese precio producto"));
+            cant=parseInt(prompt("ingrese cantidad a comprar"));
+            //proceso
+            subt=precio*cant;
+            desc=subt*0.10//=subtotal*10%
+            iva=(subt-desc)*0.19;//=(subtotal-descuento)*19%
+            netp=(subt-desc+iva);
+            //salida
+            document.write("*********************************"+"<br>");
+            document.wrtie("documento comprado:..."+nombrep+"&nbsp&nbsp"+"precio producto..."+Speso.Format(precio)+"&nbsp&nbsp" +"cantidad comprada"+cant"<br>");
+            document.wwrite("SUBTOTAL"+"<br>");
+            document.write(SPeso.format(subt)+"<br>");
+            document.wwrite("SUBTOTAL"+"<br>");
+            document.write(SPeso.format(subt)+"<br>");
+            document.wwrite("IVA"+"<br>");
+            document.write(SPeso.format(iva)+"<br>");
+            document.wwrite("neto a pagar"+"<br>");
+            document.write(SPeso.format(netop)+"<br>");
+            document.wrtie("GRACIAS POR SU COMPRA"+"<br>");
+        </center>
+
+        </body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>supermercado el barrato</h2>
+    <h3>vueltas x compras</h3>
+    <script>
+        //Programa que permita capturar el nombre de un producto, su precio unitario y su cantidad, luego calcular total a pagar, muéstrelo por un mensaje de alerta al usuario, luego permita la captura de la forma de pago (Efectivo, Nequi o Tarjeta de crédito) y validar promoción de aniversario si paga en efectivo y por compras desde $50.0000 se le obsequia un taco de galletas sino una chocolatina, finalmente enviar mensaje Gracias por su compra//
+        const SPeso = new Intl.NumberFormat('es-CO', {
+       style: 'currency',
+       currency: 'COP',
+       minimumFractionDigits: 0
+     });
+    //proceso
+    total=cantidad*precio;
+    alert("Su valor a pagar es ... " + "\n"+ total);
+document.write("Su valor a pagar es ... " + total + "<br>"+"<br>");
+//Validacion del monto a pagar en caja
+pago=parseInt(prompt("Ingrese monto efectivo pagado en caja"));
+saldo=total-pago;
+//Condicional si para verificar si hay vueltas x cambio
+if (pago==total){
+alert("TOME SU TIRILLA DE PAGO, GRACIAS POR SU COMPRA");
+}else{
+alert("TOME SU TIRILLA DE PAGO Y SUS VUELTAS..$"+saldo+"\n"+"GRACIAS POR SU COMPRA");
+}document.write("***********************************************");
+    </script>
+</body>
+</html>
